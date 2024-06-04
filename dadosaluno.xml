@@ -1,0 +1,25 @@
+﻿<dados>
+    <registro>
+        <RA>987654321</RA>
+        <nascimento>1111/11/11</nascimento>
+        <nome>João</nome>
+        <nota>8.5</nota> <!-- Português -->
+        <nota>7.0</nota> <!-- Matemática -->
+        <nota>6.0</nota> <!-- Ciências -->
+        <nota>9.0</nota> <!-- História -->
+        <nota>8.0</nota> <!-- Geografia -->
+        <nota>7.5</nota> <!-- Projeto -->
+    </registro>
+    <registro>
+        <RA>987654321</RA>
+        <nascimento>1111/11/11</nascimento>
+        <nome>Maria</nome>
+        <nota>9.0</nota>
+        <nota>8.5</nota>
+        <nota>7.0</nota>
+        <nota>6.5</nota>
+        <nota>8.0</nota>
+        <nota>7.5</nota>
+    </registro>
+    <!-- Mais registros -->
+</dados>

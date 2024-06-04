@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletim Escolar</title>
+    <link rel="stylesheet" href="boletim.css">
+    <script>
+        async function buscarDados() {
+            const ra = localStorage.getItem('RA');
+
+            if (!ra) {
+                alert('Dados de RA não encontrados.');
+                return;
+            }
+
+            try {
+                const response = await fetch('dadosaluno.txt');
+                const data = await response.text();
+
+                const linhas = data.split('\n'); // Divide o texto em linhas
+
+                for (let i = 0; i < linhas.length; i++) {
+                    const aluno = linhas[i].split(','); // Divide a linha em partes usando a vírgula como separador
+                    if (aluno[0] === ra) {
+                        const nome = aluno[1];
+                        const notas = aluno.slice(2); // Pega todas as notas a partir da terceira posição
+                        // Preencha a tabela com o nome e as notas aqui
+                        break; // Se encontrou o aluno, não precisa continuar procurando
+                    }
+                }
+            } catch (error) {
+                console.error('Erro ao buscar dados:', error);
+                alert('Erro ao buscar dados. Verifique o console para mais detalhes.');
+            }
+        }
+
+        window.onload = buscarDados;
+    </script>
+</head>
+<body>
+    <div class="container">
+        <h1>Boletim Escolar</h1>
+        <!-- Aqui você pode adicionar os elementos HTML para exibir o boletim -->
+    </div>
+</body>
+</html>

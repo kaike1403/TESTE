@@ -1,0 +1,76 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 20px;
+    background-color: #f3e5f5; /* roxo do fundo */
+    background: url(image\ 2.jpg) repeat;
+    background-size: 100%;
+}
+
+.container {
+    max-width: 900px;
+    position: fixed;
+    top: 3%;
+    bottom: 5%;
+    left: 0;
+    right: 0;
+    margin: auto;
+    background-color: #ede7f6; /* roxo muito claro */
+    border: 2px solid #ce93d8; /* roxo claro */
+    border-radius: 10px;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #7e57c2; /* roxo mid */
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+th, td {
+    padding: 12px;
+    text-align: left;
+}
+
+th {
+    background-color: #b39ddb; /* roxo claro */
+}
+
+tr:nth-child(even) {
+    background-color: #d1c4e9; /* outro roxo muito claro */
+}
+
+.aprovado {
+    color: #4caf50; /* verde aprovação */
+}
+
+.reprovado {
+    color: #f44336; /* vermelho reprovação */
+}
+
+.criterios {
+    margin-top: 20px;
+    padding-top: 10px;
+    padding-right: 10px;
+    padding-left: 10px;
+    padding-bottom: 10px;
+    background-color: #ede7f6; /* roxo muito claro */
+    color: #333;
+    border: 1px solid #ce93d8; /* roxo claro */
+    border-radius: 5px;
+}
+
+.situacao-positiva {
+    padding-left: 10px;
+    color: #4caf50; /* verde aprovação */
+}
+
+.situacao-negativa {
+    padding-left: 10px;
+    color: #f44336; /* vermelho reprovação */
+}
