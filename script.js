@@ -16,11 +16,9 @@ function armazenarDados(event) {
     event.preventDefault(); // Impede o envio do formulário
 
     const ra = document.getElementById('RA').value;
-    const nascimento = document.getElementById('nascimento').value;
 
-    // Armazena os dados no localStorage
+    // Armazena o RA no localStorage
     localStorage.setItem('RA', ra);
-    localStorage.setItem('nascimento', nascimento);
 
     // Redireciona para a página boletim.html
     window.location.href = 'boletim.html';
@@ -28,10 +26,9 @@ function armazenarDados(event) {
 
 async function buscarDados() {
     const ra = localStorage.getItem('RA');
-    const nascimento = localStorage.getItem('nascimento');
 
-    if (!ra || !nascimento) {
-        alert('Dados de RA ou data de nascimento não encontrados.');
+    if (!ra) {
+        alert('Dados de RA não encontrados.');
         return;
     }
 
@@ -45,13 +42,6 @@ async function buscarDados() {
 
         if (!student) {
             alert('Aluno não encontrado.');
-            return;
-        }
-
-        const nasc = student.querySelector('NASC').textContent;
-
-        if (nascimento !== nasc) {
-            alert('Data de nascimento não corresponde.');
             return;
         }
 
