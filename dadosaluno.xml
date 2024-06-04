@@ -1,0 +1,24 @@
+﻿<students>
+    <student RA="999999999">
+        <NASC>11/11/1111</NASC>
+        <Nome>João Silva</Nome>
+        <Portugues>7</Portugues>
+        <Matematica>8</Matematica>
+        <Biologia>6</Biologia>
+        <Fisica>7</Fisica>
+        <Quimica>9</Quimica>
+        <Historia>5</Historia>
+    </student>
+</students>
+<students>
+    <student RA="888888888">
+        <NASC>11/11/1111</NASC>
+        <Nome>hugo gay</Nome>
+        <Portugues>5</Portugues>
+        <Matematica>9</Matematica>
+        <Biologia>8</Biologia>
+        <Fisica>7</Fisica>
+        <Quimica>10</Quimica>
+        <Historia>2</Historia>
+    </student>
+</students>
