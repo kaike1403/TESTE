@@ -1,12 +1,93 @@
+</dados>
 <students>
     <student RA="999999999">
         <NASC>11/11/1111</NASC>
-        <Nome>João Silva</Nome>
         <Portugues>7</Portugues>
         <Matematica>8</Matematica>
         <Biologia>6</Biologia>
         <Fisica>7</Fisica>
         <Quimica>9</Quimica>
         <Historia>5</Historia>
+    </student>
+    <student RA="888888888">
+        <NASC>11/11/1112</NASC>
+        <Portugues>6</Portugues>
+        <Matematica>7</Matematica>
+        <Biologia>5</Biologia>
+        <Fisica>6</Fisica>
+        <Quimica>8</Quimica>
+        <Historia>4</Historia>
+    </student>
+    <student RA="777777777">
+        <NASC>11/11/1113</NASC>
+        <Portugues>9</Portugues>
+        <Matematica>9</Matematica>
+        <Biologia>8</Biologia>
+        <Fisica>9</Fisica>
+        <Quimica>7</Quimica>
+        <Historia>6</Historia>
+    </student>
+    <student RA="666666666">
+        <NASC>11/11/1114</NASC>
+        <Portugues>4</Portugues>
+        <Matematica>5</Matematica>
+        <Biologia>6</Biologia>
+        <Fisica>4</Fisica>
+        <Quimica>5</Quimica>
+        <Historia>3</Historia>
+    </student>
+    <student RA="555555555">
+        <NASC>11/11/1115</NASC>
+        <Portugues>5</Portugues>
+        <Matematica>6</Matematica>
+        <Biologia>7</Biologia>
+        <Fisica>5</Fisica>
+        <Quimica>6</Quimica>
+        <Historia>4</Historia>
+    </student>
+    <student RA="444444444">
+        <NASC>11/11/1116</NASC>
+        <Portugues>8</Portugues>
+        <Matematica>7</Matematica>
+        <Biologia>6</Biologia>
+        <Fisica>8</Fisica>
+        <Quimica>9</Quimica>
+        <Historia>7</Historia>
+    </student>
+    <student RA="333333333">
+        <NASC>11/11/1117</NASC>
+        <Portugues>6</Portugues>
+        <Matematica>5</Matematica>
+        <Biologia>4</Biologia>
+        <Fisica>6</Fisica>
+        <Quimica>7</Quimica>
+        <Historia>3</Historia>
+    </student>
+    <student RA="222222222">
+        <NASC>11/11/1118</NASC>
+        <Portugues>7</Portugues>
+        <Matematica>8</Matematica>
+        <Biologia>9</Biologia>
+        <Fisica>7</Fisica>
+        <Quimica>8</Quimica>
+        <Historia>6</Historia>
+    </student>
+    <student RA="111111111">
+        <NASC>11/11/1119</NASC>
+        <Portugues>9</Portugues>
+        <Matematica>9</Matematica>
+        <Biologia>8</Biologia>
+        <Fisica>9</Fisica>
+        <Quimica>7</Quimica>
+        <Historia>5</Historia>
+    </student>
+    <student RA="000000000">
+        <NASC>11/11/1120</NASC>
+        <Portugues>5</Portugues>
+        <Matematica>6</Matematica>
+        <Biologia>7</Biologia>
+        <Fisica>5</Fisica>
+        <Quimica>6</Quimica>
+        <Historia>4</Historia>
     </student>
 </students>
