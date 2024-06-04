@@ -8,27 +8,55 @@
     <script>
         async function buscarDados() {
             const ra = localStorage.getItem('RA');
+            const nascimento = localStorage.getItem('nascimento');
 
-            if (!ra) {
-                alert('Dados de RA não encontrados.');
+            if (!ra || !nascimento) {
+                alert('Dados de RA ou data de nascimento não encontrados.');
                 return;
             }
 
             try {
-                const response = await fetch('dadosaluno.txt');
-                const data = await response.text();
+                const response = await fetch('dadosaluno.xml');
+                const xmlText = await response.text();
+                const parser = new DOMParser();
+                const xmlDoc = parser.parseFromString(xmlText, "application/xml");
 
-                const linhas = data.split('\n'); // Divide o texto em linhas
+                const student = xmlDoc.querySelector(`student[RA="${ra}"]`);
 
-                for (let i = 0; i < linhas.length; i++) {
-                    const aluno = linhas[i].split(','); // Divide a linha em partes usando a vírgula como separador
-                    if (aluno[0] === ra) {
-                        const nome = aluno[1];
-                        const notas = aluno.slice(2); // Pega todas as notas a partir da terceira posição
-                        // Preencha a tabela com o nome e as notas aqui
-                        break; // Se encontrou o aluno, não precisa continuar procurando
-                    }
+                if (!student) {
+                    alert('Aluno não encontrado.');
+                    return;
                 }
+
+                const nasc = student.querySelector('NASC').textContent;
+
+                if (nascimento !== nasc) {
+                    alert('Data de nascimento não corresponde.');
+                    return;
+                }
+
+                const nome = student.querySelector('Nome') ? student.querySelector('Nome').textContent : 'Nome não disponível';
+                const notas = {
+                    Portugues: student.querySelector('Portugues').textContent,
+                    Matematica: student.querySelector('Matematica').textContent,
+                    Biologia: student.querySelector('Biologia').textContent,
+                    Fisica: student.querySelector('Fisica').textContent,
+                    Quimica: student.querySelector('Quimica').textContent,
+                    Historia: student.querySelector('Historia').textContent
+                };
+
+                document.getElementById('nome-aluno').textContent = `Nome: ${nome}`;
+                document.getElementById('ra-aluno').textContent = `RA: ${ra}`;
+
+                const tabela = document.getElementById('tabela-notas');
+                for (const [disciplina, nota] of Object.entries(notas)) {
+                    const row = tabela.insertRow();
+                    const cell1 = row.insertCell(0);
+                    const cell2 = row.insertCell(1);
+                    cell1.textContent = disciplina;
+                    cell2.textContent = nota;
+                }
+
             } catch (error) {
                 console.error('Erro ao buscar dados:', error);
                 alert('Erro ao buscar dados. Verifique o console para mais detalhes.');
@@ -41,7 +69,14 @@
 <body>
     <div class="container">
         <h1>Boletim Escolar</h1>
-        <!-- Aqui você pode adicionar os elementos HTML para exibir o boletim -->
+        <p id="nome-aluno"></p>
+        <p id="ra-aluno"></p>
+        <table id="tabela-notas" border="1">
+            <tr>
+                <th>Disciplina</th>
+                <th>Nota</th>
+            </tr>
+        </table>
     </div>
 </body>
 </html>

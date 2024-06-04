@@ -10,9 +10,11 @@
             event.preventDefault(); // Impede o envio do formulário
 
             const ra = document.getElementById('RA').value;
+            const nascimento = document.getElementById('nascimento').value;
 
             // Armazena os dados no localStorage
             localStorage.setItem('RA', ra);
+            localStorage.setItem('nascimento', nascimento);
 
             // Redireciona para a página boletim.html
             window.location.href = 'boletim.html';
